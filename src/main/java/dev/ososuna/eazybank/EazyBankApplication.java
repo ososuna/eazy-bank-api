@@ -1,13 +1,13 @@
-package dev.ososuna.springsecuritybasic;
+package dev.ososuna.eazybank;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringsecuritybasicApplication {
+public class EazyBankApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringsecuritybasicApplication.class, args);
+		SpringApplication.run(EazyBankApplication.class, args);
 	}
 
 }
