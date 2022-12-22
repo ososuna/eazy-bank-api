@@ -8,4 +8,5 @@ import dev.ososuna.eazybank.model.Customer;
 
 public interface CustomerRepository extends CrudRepository<Customer, Long> {
   Optional<Customer> findByEmailAndActiveTrue(String email);
+  boolean existsByEmailAndActiveTrue(String email);
 }
