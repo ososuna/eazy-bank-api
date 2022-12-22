@@ -11,14 +11,14 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name="user")
-public class User extends AbstractModificationAttributesEntity {
-  @Column(name="username")
+@Table(name="customer")
+public class Customer extends AbstractModificationAttributesEntity {
+  @Column(name="email", unique=true, nullable=false)
   private String username;
 
-  @Column(name="password")
+  @Column(name="password", nullable=false)
   private String password;
 
-  @Column(name="authority")
-  private String authority;
+  @Column(name="role", nullable=false)
+  private String role;
 }
