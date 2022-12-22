@@ -14,7 +14,7 @@ import lombok.Setter;
 @Table(name="customer")
 public class Customer extends AbstractModificationAttributesEntity {
   @Column(name="email", unique=true, nullable=false)
-  private String username;
+  private String email;
 
   @Column(name="password", nullable=false)
   private String password;
