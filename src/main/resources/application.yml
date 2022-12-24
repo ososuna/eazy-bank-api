@@ -25,7 +25,5 @@ spring:
       platform: mysql
 server:
   port: ${app_port:3001}
-  servlet:
-    context-path: /api/v1
   error:
     include-message: always

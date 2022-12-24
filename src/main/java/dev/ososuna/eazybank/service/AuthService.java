@@ -1,5 +1,7 @@
 package dev.ososuna.eazybank.service;
 
+import java.time.LocalDate;
+
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -29,6 +31,8 @@ public class AuthService {
     customer.setPassword(passwordEncoder.encode(request.getPassword()));
     customer.setActive(true);
     customer.setRole(Role.ROLE_USER.toString());
+    customer.setCreatedBy(request.getEmail());
+    customer.setCreatedDate(LocalDate.now());
     return customerRepository.save(customer);
   }
 }
