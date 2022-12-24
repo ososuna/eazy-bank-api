@@ -13,6 +13,7 @@ import lombok.Setter;
 @Entity
 @Table(name="customer")
 public class Customer extends AbstractModificationAttributesEntity {
+  
   @Column(name="email", unique=true, nullable=false)
   private String email;
 
