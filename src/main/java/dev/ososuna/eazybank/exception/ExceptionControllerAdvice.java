@@ -14,7 +14,7 @@ public class ExceptionControllerAdvice {
 
   @ExceptionHandler(BadRequestException.class)
   public ProblemDetail handleBadRequestException(BadRequestException e, HttpServletRequest request) throws URISyntaxException {
-    final ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.NOT_FOUND, e.getMessage());
+    final ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.BAD_REQUEST, e.getMessage());
     problemDetail.setTitle("Bad Request");
     return problemDetail;
   }
